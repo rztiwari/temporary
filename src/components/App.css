@@ -1,0 +1,40 @@
+.App {
+  background-color: #eee;
+}
+
+.App .form-control {
+  border-radius: 0px;
+}
+
+.center {
+  margin: 0px auto;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.no-left-pad {
+  padding-left: 0px !important;
+}
+
+.no-right-pad {
+  padding-right: 0px !important;
+}
+
+.btn.btn-default.mm-btn-default {
+  background-image: none;
+  border-radius: 0px;
+}
+
+.btn.btn-primary.mm-btn-primary {
+  background-image: none;
+  background-color: #F07A90;
+  color: #fff;
+  border-radius: 0px;
+  border-color: #F07A90;
+}
