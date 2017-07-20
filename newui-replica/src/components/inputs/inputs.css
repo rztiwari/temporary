@@ -1,0 +1,46 @@
+.no-right-pad {
+  padding-right: 0px;
+}
+
+.no-left-pad {
+  padding-left: 0px;
+}
+
+.combo-box .no-right-pad {
+  padding-right: 0px;
+}
+
+.combo-box .no-left-pad {
+  padding-left: 0px;
+}
+
+.mmOption {
+  white-space: nowrap;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.flag-img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.account-details {
+  padding-bottom: 10px;
+}
+
+.account-details .payfrom {
+  padding-top: 35px;
+  text-align: center;
+}
+
+.account-details .payfrom p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.account-details .payfrom i.glyphicon {
+  font-size: 18px;
+}

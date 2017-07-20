@@ -1,0 +1,31 @@
+.section {
+  border: 3px solid #d8d8d8;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section header {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section .control-label {
+  color: #9a9494;
+}
+
+.beneficiary-details-section {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.payto {
+  text-align: center;
+}
+
+.payto p {
+  font-size: 18px;
+  font-weight: bold;
+}

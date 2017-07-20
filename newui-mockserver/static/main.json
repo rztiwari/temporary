@@ -1,0 +1,870 @@
+{
+    "status": {
+        "code": 0
+    },
+    "response": {
+        "view": {
+            "model": "payments",
+            "data": [
+                {
+                    "elementId": "beneficiaryDetailsSection",
+                    "sequence": [
+                        1,
+                        1
+                    ],
+                    "properties": {
+                        "mandatory": false,
+                        "nlsLabel": "psLbl_PAY_TO_LABEL"
+                    },
+                    "childElements": {
+                        "data": [
+                            {
+                                "elementId": "beneficiaryDetails",
+                                "sequence": [
+                                    1,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": true,
+                                    "nlsLabel": "psLbl_BENEFICIARY_HEADING"
+                                },
+                                "childElements": {
+                                    "data": [
+                                        {
+                                            "elementId": "beneficiaryOptions",
+                                            "sequence": [
+                                                1,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": true,
+                                                "nlsLabel": "psLbl_PAY_TO_LABEL"
+                                            },
+                                            "childElements": {
+                                                "data": [
+                                                    {
+                                                        "elementId": "existingBeneficiary",
+                                                        "sequence": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_PAY_AN_EXISTING_BENEFICIARY",
+                                                            "defaultElement": true
+                                                        },
+                                                        "childElements": {
+                                                            "data": [
+                                                                {
+                                                                    "elementId": "beneficiaryBankLocation",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_BENEFICIARY_BANK_LOCATION",
+                                                                        "nlsValuePrefix": "psRes_LOCATIONS"
+                                                                    },
+                                                                    "childElements": null
+                                                                },
+                                                                {
+                                                                    "elementId": "existingBeneficiaryId",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": true,
+                                                                        "nlsLabel": "psLbl_PAY_AN_EXISTING_BENEFICIARY_ID",
+                                                                        "threshold": [
+                                                                            10
+                                                                        ]
+                                                                    },
+                                                                    "childElements": null
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "default": "existingBeneficiary"
+                                            }
+                                        },
+                                        {
+                                            "elementId": "beneficiaryData",
+                                            "sequence": [
+                                                1,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": false
+                                            },
+                                            "childElements": {
+                                                "data": [
+                                                    {
+                                                        "elementId": "beneficiarySection",
+                                                        "sequence": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_BENEFICIARY_SECTION_LABEL"
+                                                        },
+                                                        "childElements": {
+                                                            "data": [
+                                                                {
+                                                                    "elementId": "beneficiaryNameAddressAccount",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_ENTER_BENEFICIARY_NAME_AND_ADDRESS",
+                                                                        "defaultElement": true
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": [
+                                                                            {
+                                                                                "elementId": "beneficiaryName",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_BENEFICIARY_NAME_LABEL",
+                                                                                    "format": "^[ a-zA-Z0-9/?().,'+][ a-zA-Z0-9-/?:().,'+]{0,34}$",
+                                                                                    "min": 0,
+                                                                                    "max": 35
+                                                                                },
+                                                                                "childElements": null
+                                                                            },
+                                                                            {
+                                                                                "elementId": "beneficiaryAddress",
+                                                                                "sequence": [
+                                                                                    2,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": false,
+                                                                                    "nlsLabel": "psLbl_BENEFICIARY_ADDRESS_LABEL"
+                                                                                },
+                                                                                "childElements": {
+                                                                                    "data": [
+                                                                                        {
+                                                                                            "elementId": "addressLine1",
+                                                                                            "sequence": [
+                                                                                                1,
+                                                                                                1
+                                                                                            ],
+                                                                                            "properties": {
+                                                                                                "mandatory": true,
+                                                                                                "nlsLabel": "psLbl_BENEFICIARY_ADDRESS_LINE1_LABEL",
+                                                                                                "format": "^[ a-zA-Z0-9/?().,'+][ a-zA-Z0-9-/?:().,'+]{0,34}$",
+                                                                                                "min": 0,
+                                                                                                "max": 35
+                                                                                            },
+                                                                                            "childElements": null
+                                                                                        },
+                                                                                        {
+                                                                                            "elementId": "addressLine2",
+                                                                                            "sequence": [
+                                                                                                2,
+                                                                                                1
+                                                                                            ],
+                                                                                            "properties": {
+                                                                                                "mandatory": false,
+                                                                                                "nlsLabel": "psLbl_BENEFICIARY_ADDRESS_LINE2_LABEL",
+                                                                                                "format": "^[ a-zA-Z0-9/?().,'+][ a-zA-Z0-9-/?:().,'+]{0,34}$",
+                                                                                                "min": 0,
+                                                                                                "max": 35
+                                                                                            },
+                                                                                            "childElements": null
+                                                                                        },
+                                                                                        {
+                                                                                            "elementId": "addressLine3",
+                                                                                            "sequence": [
+                                                                                                3,
+                                                                                                1
+                                                                                            ],
+                                                                                            "properties": {
+                                                                                                "mandatory": false,
+                                                                                                "nlsLabel": "psLbl_BENEFICIARY_ADDRESS_LINE3_LABEL",
+                                                                                                "format": "^[ a-zA-Z0-9-/?:().,'+]{0,35}$",
+                                                                                                "min": 0,
+                                                                                                "max": 35
+                                                                                            },
+                                                                                            "childElements": null
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "elementId": "beneficiaryAccountId",
+                                                                                "sequence": [
+                                                                                    5,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": false,
+                                                                                    "nlsLabel": "psLbl_BENEFICIARY_ACCOUNT_LABEL",
+                                                                                    "format": "^[ a-zA-Z0-9-/?:().,'+]{0,34}$",
+                                                                                    "min": 0,
+                                                                                    "max": 34
+                                                                                },
+                                                                                "childElements": null
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "elementId": "enterLocalBeneficiaryId",
+                                                                    "sequence": [
+                                                                        2,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_ENTER_CHIPS_UID"
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": [
+                                                                            {
+                                                                                "elementId": "localBeneficiaryId",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_LOCAL_BENEFICIARY_LABEL",
+                                                                                    "nlsValuePrefix": "psRes_BANKIDENTIFIER",
+                                                                                    "format": "^[0-9]{6}$",
+                                                                                    "min": 6,
+                                                                                    "max": 6
+                                                                                },
+                                                                                "childElements": null
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "default": "beneficiaryNameAddressAccount"
+                                                        }
+                                                    },
+                                                    {
+                                                        "elementId": "beneficiaryBankId",
+                                                        "sequence": [
+                                                            3,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "suppressDefaultValue": true,
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_BENEFICIARY_BANK_IDENTIFIER_LABEL",
+                                                            "nlsValuePrefix": "psRes_BANKIDENTIFIER",
+                                                            "format": "^[ a-zA-Z0-9-/?:().,'+]{0,12}$",
+                                                            "min": 0,
+                                                            "max": 12
+                                                        },
+                                                        "childElements": null
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "elementId": "paymentSpecificsDetails",
+                    "sequence": [
+                        2,
+                        1
+                    ],
+                    "properties": {
+                        "mandatory": false,
+                        "nlsLabel": "psLbl_INSTRUCTION_DETAILS_HEADING"
+                    },
+                    "childElements": {
+                        "data": [
+                            {
+                                "elementId": "transactionAmount",
+                                "sequence": [
+                                    1,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": true,
+                                    "nlsLabel": "psLbl_AMOUNT_LABEL"
+                                },
+                                "childElements": {
+                                    "data": [
+                                        {
+                                            "elementId": "transactionAmountSelection",
+                                            "sequence": [
+                                                1,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": false,
+                                                "nlsLabel": "psLbl_AMOUNT_AND_CURRENCY_LABEL"
+                                            },
+                                            "childElements": {
+                                                "data": [
+                                                    {
+                                                        "elementId": "payInTransactionCurrency",
+                                                        "sequence": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_SPECIFY_AMOUNT_RECEIVED_LABEL",
+                                                            "defaultElement": true
+                                                        },
+                                                        "childElements": {
+                                                            "data": [
+                                                                {
+                                                                    "elementId": "transactionCurrencyAndAmount",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": true,
+                                                                        "nlsLabel": "psLbl_AMOUNT_LABEL"
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": [
+                                                                            {
+                                                                                "elementId": "transactionCurrency",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "clearOnChange": [
+                                                                                        "exchangeContractDetails"
+                                                                                    ],
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_CURRENCY_LABEL",
+                                                                                    "nlsValuePrefix": "psRes_CURRENCIES"
+                                                                                },
+                                                                                "childElements": null
+                                                                            },
+                                                                            {
+                                                                                "elementId": "amountInTransactionCurrency",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    2
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_AMOUNT_IN_TRANSACTION_LABEL"
+                                                                                },
+                                                                                "childElements": null
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "elementId": "payInAccountCurrency",
+                                                        "sequence": [
+                                                            2,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_SPECIFY_AMOUNT_SENT_LABEL"
+                                                        },
+                                                        "childElements": {
+                                                            "data": [
+                                                                {
+                                                                    "elementId": "amountInAccountCurrency",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": true,
+                                                                        "nlsLabel": "psLbl_EQUIVALENT_AMOUNT_LABEL"
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": []
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "elementId": "transactionCurrencyEquivalent",
+                                                                    "sequence": [
+                                                                        2,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": true,
+                                                                        "nlsLabel": "psLbl_CURRENCY_TO_BE_SENT_LABEL",
+                                                                        "nlsValuePrefix": "psRes_CURRENCIES"
+                                                                    },
+                                                                    "childElements": null
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "default": "payInTransactionCurrency"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "elementId": "valueDate",
+                                "sequence": [
+                                    2,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_VALUE_DATE_LABEL"
+                                },
+                                "childElements": {
+                                    "data": [
+                                        {
+                                            "elementId": "payImmediate",
+                                            "sequence": [
+                                                1,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": false,
+                                                "nlsLabel": "psLbl_PAY_IMMEDIATE_LABEL"
+                                            },
+                                            "childElements": {
+                                                "data": []
+                                            }
+                                        },
+                                        {
+                                            "elementId": "payOnDate",
+                                            "sequence": [
+                                                2,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": false,
+                                                "nlsLabel": "psLbl_PAY_ON_DATE_LABEL"
+                                            },
+                                            "childElements": {
+                                                "data": [
+                                                    {
+                                                        "elementId": "specificValueDate",
+                                                        "sequence": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": true,
+                                                            "nlsLabel": "psLbl_VALUE_DATE_SPECIFIC_LABEL",
+                                                            "min": 0,
+                                                            "max": 45,
+                                                            "defaultElement": true
+                                                        },
+                                                        "childElements": {
+                                                            "data": []
+                                                        }
+                                                    }
+                                                ],
+                                                "default": "specificValueDate"
+                                            }
+                                        },
+                                        {
+                                            "elementId": "payRecurring",
+                                            "sequence": [
+                                                3,
+                                                1
+                                            ],
+                                            "properties": {
+                                                "mandatory": false,
+                                                "nlsLabel": "psLbl_PAY_RECURRING_LABEL"
+                                            },
+                                            "childElements": {
+                                                "data": [
+                                                    {
+                                                        "elementId": "initialValueDate",
+                                                        "sequence": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": true,
+                                                            "nlsLabel": "psLbl_PAY_INITIAL_VALUE_DATE_LABEL",
+                                                            "min": 0,
+                                                            "max": 365
+                                                        },
+                                                        "childElements": null
+                                                    },
+                                                    {
+                                                        "elementId": "recurringFrequency",
+                                                        "sequence": [
+                                                            2,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": true,
+                                                            "nlsLabel": "psLbl_PAY_RECURRING_FREQUENCY_LABEL"
+                                                        },
+                                                        "childElements": null
+                                                    },
+                                                    {
+                                                        "elementId": "cutoff",
+                                                        "sequence": [
+                                                            3,
+                                                            1
+                                                        ],
+                                                        "properties": {
+                                                            "mandatory": false,
+                                                            "nlsLabel": "psLbl_CUTOFF_LABEL"
+                                                        },
+                                                        "childElements": {
+                                                            "data": [
+                                                                {
+                                                                    "elementId": "noCutoff",
+                                                                    "sequence": [
+                                                                        1,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_PAY_CUTOFF_NONE_LABEL",
+                                                                        "defaultElement": true
+                                                                    },
+                                                                    "childElements": null
+                                                                },
+                                                                {
+                                                                    "elementId": "dateCutoff",
+                                                                    "sequence": [
+                                                                        2,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_PAY_CUTOFF_DATE_LABEL"
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": [
+                                                                            {
+                                                                                "elementId": "finalValueDate",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_PAY_FINAL_VALUE_DATE_LABEL",
+                                                                                    "min": 0
+                                                                                },
+                                                                                "childElements": null
+                                                                            },
+                                                                            {
+                                                                                "elementId": "dateFinalValueAmount",
+                                                                                "sequence": [
+                                                                                    2,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": false,
+                                                                                    "nlsLabel": "psLbl_FINAL_VALUE_AMOUNT_LABEL"
+                                                                                },
+                                                                                "childElements": null
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "elementId": "countCutoff",
+                                                                    "sequence": [
+                                                                        3,
+                                                                        1
+                                                                    ],
+                                                                    "properties": {
+                                                                        "mandatory": false,
+                                                                        "nlsLabel": "psLbl_PAY_CUTOFF_COUNT_LABEL"
+                                                                    },
+                                                                    "childElements": {
+                                                                        "data": [
+                                                                            {
+                                                                                "elementId": "recurringCount",
+                                                                                "sequence": [
+                                                                                    1,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": true,
+                                                                                    "nlsLabel": "psLbl_PAY_RECURRING_COUNT_LABEL",
+                                                                                    "min": 2,
+                                                                                    "max": 99
+                                                                                },
+                                                                                "childElements": null
+                                                                            },
+                                                                            {
+                                                                                "elementId": "countFinalValueAmount",
+                                                                                "sequence": [
+                                                                                    2,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": false,
+                                                                                    "nlsLabel": "psLbl_FINAL_VALUE_AMOUNT_LABEL"
+                                                                                },
+                                                                                "childElements": null
+                                                                            },
+                                                                            {
+                                                                                "elementId": "totalAmount",
+                                                                                "sequence": [
+                                                                                    3,
+                                                                                    1
+                                                                                ],
+                                                                                "properties": {
+                                                                                    "mandatory": false,
+                                                                                    "nlsLabel": "psLbl_TOTAL_AMOUNT_LABEL"
+                                                                                },
+                                                                                "childElements": null
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "default": "noCutoff"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "elementId": "chargesCode",
+                                "sequence": [
+                                    4,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": true,
+                                    "nlsLabel": "psLbl_CHARGES_LABEL"
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "primaryReference",
+                                "sequence": [
+                                    6,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_CUSTOMER_REFERENCE_LABEL",
+                                    "format": "^([a-zA-Z0-9-?:().,'+](?!.*/{2})[ a-zA-Z0-9-?/:().,'+]{0,14}[ a-zA-Z0-9-?:().,'+]|[a-zA-Z0-9-?:().,'+])$",
+                                    "min": 0,
+                                    "max": 16
+                                },
+                                "childElements": null
+                            }
+                        ]
+                    }
+                },
+                {
+                    "elementId": "additionalDetails",
+                    "sequence": [
+                        4,
+                        1
+                    ],
+                    "properties": {
+                        "mandatory": false,
+                        "nlsLabel": "psLbl_ADDITIONAL_DETAILS_HEADING"
+                    },
+                    "childElements": {
+                        "data": [
+                            {
+                                "elementId": "infoForBeneficiary",
+                                "sequence": [
+                                    3,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_BENEFICIARY_INFO_HEADING",
+                                    "expanded": true
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "bankInstruction",
+                                "sequence": [
+                                    6,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_BANK_INSTRUCTION_HEADING",
+                                    "expanded": true
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "instructionCodes",
+                                "sequence": [
+                                    7,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_INSTRUCTION_CODE_HEADING",
+                                    "expanded": true
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "intermediaryBank",
+                                "sequence": [
+                                    8,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_INTERMEDIARY_BANK_HEADING"
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "regulatoryReporting",
+                                "sequence": [
+                                    9,
+                                    1
+                                ],
+                                "properties": {
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_REGULATORY_REPORTING_HEADING"
+                                },
+                                "childElements": null
+                            },
+                            {
+                                "elementId": "advising",
+                                "sequence": [
+                                    13,
+                                    1
+                                ],
+                                "properties": {
+                                    "redirect": "addAdvice",
+                                    "mandatory": false,
+                                    "nlsLabel": "psLbl_ADVISING_LABEL"
+                                },
+                                "childElements": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "resources": {
+            "localBeneficiaryId": {
+                "options": [
+                    "UID"
+                ]
+            },
+            "beneficiaryBankLocation": {
+                "default": "US",
+                "options": [
+                    "US"
+                ]
+            },
+            "transactionCurrencyEquivalent": {
+                "default": "USD",
+                "prioritised": [
+                    "CNY",
+                    "CAD"
+                ],
+                "options": [
+                    "CAD",
+                    "CHF",
+                    "CNY",
+                    "DKK",
+                    "EUR",
+                    "GBP",
+                    "JPY",
+                    "MXN",
+                    "NOK",
+                    "SEK",
+                    "USD"
+                ]
+            },
+            "chargesCode": {
+                "default": "SHAR",
+                "options": [
+                    "CRED",
+                    "DEBT",
+                    "SHAR"
+                ]
+            },
+            "beneficiaryBankId": {
+                "default": "SWF",
+                "options": [
+                    "FED",
+                    "ABA",
+                    "SWF"
+                ]
+            },
+            "transactionCurrency": {
+                "default": "USD",
+                "prioritised": [
+                    "CNY",
+                    "CAD"
+                ],
+                "options": [
+                    "CAD",
+                    "CHF",
+                    "CNY",
+                    "DKK",
+                    "EUR",
+                    "GBP",
+                    "JPY",
+                    "MXN",
+                    "NOK",
+                    "SEK",
+                    "USD"
+                ]
+            },
+            "recurringFrequency": {
+                "default": "M1",
+                "prioritised": [
+                    "D1",
+                    "W1",
+                    "W2",
+                    "M1",
+                    "M2",
+                    "M3",
+                    "M6",
+                    "MN",
+                    "A1"
+                ],
+                "options": [
+                    "A1",
+                    "D1",
+                    "M1",
+                    "M2",
+                    "M3",
+                    "M6",
+                    "MN",
+                    "W1",
+                    "W2"
+                ]
+            }
+        }
+    }
+}
